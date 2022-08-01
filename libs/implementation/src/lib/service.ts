@@ -3,5 +3,7 @@ import { Model } from '../../../model/src';
 
 @Injectable()
 export class Service implements Model {
-  do() {}
+  do() {
+    console.log('');
+  }
 }
