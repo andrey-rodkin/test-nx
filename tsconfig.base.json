@@ -1,0 +1,29 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "rootDir": ".",
+    "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "target": "es2015",
+    "module": "esnext",
+    "lib": ["es2017", "dom"],
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    "baseUrl": ".",
+    "paths": {
+      "@stackblitz-nx-angular/child1": ["libs/child1/src/index.ts"],
+      "@stackblitz-nx-angular/child2": ["libs/child2/src/index.ts"],
+      "@stackblitz-nx-angular/child3": ["libs/child3/src/index.ts"],
+      "@stackblitz-nx-angular/implementation": [
+        "libs/implementation/src/index.ts"
+      ],
+      "@stackblitz-nx-angular/model": ["libs/model/src/index.ts"],
+      "@stackblitz-nx-angular/parent": ["libs/parent/src/index.ts"]
+    }
+  },
+  "exclude": ["node_modules", "tmp"]
+}
