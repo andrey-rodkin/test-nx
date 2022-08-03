@@ -1,11 +1,19 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { ParentModule } from '../../../../libs/parent/src';
 import { AppComponent } from './app.component';
+import { RouterModule, Routes } from '@angular/router';
+
+const routes: Routes = [
+  {
+    path: 'parent',
+    loadChildren: () =>
+      import('@stackblitz-nx-angular/parent').then((m) => m.ParentModule),
+  },
+];
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, ParentModule],
+  imports: [BrowserModule, RouterModule.forRoot(routes)],
   providers: [],
   bootstrap: [AppComponent],
 })
